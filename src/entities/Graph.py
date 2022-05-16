@@ -17,9 +17,9 @@ class Graph:
 
 
 class Edge:
-    """ to-be-Obsolete class for representing Edges
-    Only for starting purposes, replace this with tuples.
-    Test with namedtuples using __slots__
+    """ class for representing Edges between two points.
+
+    Done with namedtuples using __slots__
 
     """
     __slots__ = ['start', 'end', 'weight']
