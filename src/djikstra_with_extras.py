@@ -18,21 +18,20 @@ def djikstra(graph: Graph, start, end=-1, GUI=Mock_Gui()):
     heappush(heap, (0, start))
     round = 1
     while len(heap) > 0:
-        # is this dist total distance to vertex or...seems like total. CHECK AFTER LUNCH - TODO
+        # dist is total distance to vertex using this path, there might already be a shorter way in distances
         dist, vertex = heappop(heap)
-        if end != -1 and vertex == end:
+        # print(f'popped {dist=}, {vertex=}')
+        if end != -1 and vertex == end:  # this is shortest distance, if there was a shorter way it would have been popped already
             return distances[end]
         if handled[vertex]:
             continue
         handled[vertex] = True
+        # fetch next one only once, here.
+        dist_here = distances[vertex]
         for edge in graph.give_edges(vertex):
-            # this should already be the shortest length ? check!! TODO
             if not handled[edge.end]:
                 dist_old = distances[edge.end]
-                # CHECK THIS!! - TODO
-                new_dist = distances[edge.start] + \
-                    edge.weight  # 'edge.start == vertex' here
-                # but is distances[edge.start] == dist ?
+                new_dist = dist_here + edge.weight
                 if dist_old == -1 or new_dist < dist_old:
                     distances[edge.end] = new_dist
                     heappush(heap, (new_dist, edge.end))

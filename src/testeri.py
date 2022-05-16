@@ -1,18 +1,9 @@
-from entities.Verkko import Kaari, Verkko
 from djikstra_with_extras import djikstra
 from ui.mock_gui import Mock_Gui
 from entities.Graph import Edge, Graph
 
-# tehdään ensin 5 solmuinen verkko, jossa kaikkien pisteiden välillä kaari
-# tirakirjan kuvan 11.4 verkko
-VERKKO0 = Verkko(5, [
-    Kaari(1, 2, 8),
-    Kaari(1, 3, 2),
-    Kaari(2, 4, 5),
-    Kaari(3, 2, 4),
-    Kaari(3, 5, 7),
-    Kaari(5, 4, 3),
-])
+# first a graph with 5 vertices, source tirakirja pic 11.4
+
 VERKKO1 = Graph(5, [
     Edge(1, 2, 8),
     Edge(1, 3, 2),
@@ -21,6 +12,12 @@ VERKKO1 = Graph(5, [
     Edge(3, 5, 7),
     Edge(5, 4, 3),
 ])
+
+# mock_gui so just the prints
+
 mok = Mock_Gui()
+
+# various test inputs
+
 #djikstra(graph=VERKKO1, start=1, GUI=mok)
 djikstra(graph=VERKKO1, start=1, end=5, GUI=mok)
