@@ -14,7 +14,7 @@ class Graph:
             # self.edges[edge[0]].append(edge)
 
     def give_edges(self, vertex):
-        if vertex <= 1 or vertex > self.vertices:
+        if vertex < 1 or vertex > self.vertices:
             raise ValueError
         return self.edges[vertex]
 
