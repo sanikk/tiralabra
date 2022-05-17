@@ -13,4 +13,4 @@
 
 - forgot this one while filling out the one before this. **Lunch!**
 
-- do a proper project_specification.md, last one sucked
+- do a proper project_specification.md, last one was rushed

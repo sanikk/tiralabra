@@ -7,8 +7,12 @@ class Graph:
     def __init__(self, vertices: int, edges: list):
         self.vertices = vertices
         self.edges = [[] for i in range(vertices+1)]
+        summa = 0
         for edge in edges:
             self.edges[edge.start].append(edge)
+            summa += edge.weight
+        self.average_weight = summa / len(edges)
+        self.number_of_edges = len(edges)
 
     def give_edges(self, vertex):
         if vertex < 1 or vertex > self.vertices:
