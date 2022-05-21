@@ -7,9 +7,7 @@ tämän viikkopalautuksen ajan.
 
 Dijkstralle tämä aikavaativuus on ilmeisesti O(n + m log m), missä m log m on keon toiminnasta johtuvaa. Ainakaan alustavassa versiossa käyttämäni valmiin prioriteettijonon eli heapq:n toteutuksesta (https://github.com/python/cpython/blob/3.10/Lib/heapq.py) en heti huomaa mitään syytä miksi tämän pitäisi olla oleellisesti hitaampi. Toivottavasti pääsen omalla kyhäelmälläni suunnilleen samaan. 
 
-IDA* aikavaatimukseksi on ilmoitettu 
-
-Tilavaatimuksista DIA* pahin tapaus on O(d), ja Djikstran O()
+IDA*n aikavaativuus riippuu ilmeisesti suurelta osalta heuristiikkafunktion soveltuvuudesta.
 
 Molempien algoritmien toteutuksessa on pyritty seuraamaan hyviä käytänteitä Pythonilla, tosin aiheesta johtuen teho menee tarvittaessa luettavuuden edelle, mutta pyrin huomioimaan tämän kommenteissa. Ilmeisiä optimisaatioita on tehty jonkun verran, mutta myös melko naiviit versiot on tallennettu toimivina, ja testattuina.
 

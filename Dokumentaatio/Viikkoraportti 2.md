@@ -1,7 +1,7 @@
 ## Viikkoraportti 2
 ### viikolta 2! :)
 
-Käytetyt tunnit: 7
+Käytetyt tunnit: 12
 
 - Tehty (toivottavasti) tarkoitukseen sopiva Dijkstra (naiivi+vähän+vähän enemmän optimoitu), mock_gui kehitykseen+testaukseen.
 - Muutettu projektin koodin kieleksi englanti.
@@ -13,3 +13,4 @@ Käytetyt tunnit: 7
 - Verkko laskee nyt muunnosvaiheessa kaarien keskipainon ida:n heuristiikkaa varten 
 -- !!! TODO siirrä tämä muualle !!!
 - muutettu kaikki djikstrat dijkstroiksi :D
+- tutustuttu yleisesti verkkoihin ja niiden esitystapoihin
